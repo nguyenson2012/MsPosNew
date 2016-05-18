@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="10dp"
+    >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="#FFA500"
+        android:id="@+id/layoutCart">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/btnBackOption"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_weight="1"
+                android:src="@drawable/back_option"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/cart"
+            android:id="@+id/tvProductInCart"
+            android:textColor="@android:color/white"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imgCommentCartPlace"
+            android:src="@drawable/comment_cart"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutCart"
+        android:background="@drawable/border_layout">
+
+        <!--Customer in cart-->
+        <RelativeLayout
+            android:id="@+id/layoutCustomerCartPlace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_customer_height"
+            android:background="@android:color/white"
+            android:padding="@dimen/layout_customer_checkout_padding"
+            >
+            <ImageView
+                android:id="@+id/imgUserCartPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/user"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/tvAddCustomerToCart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toRightOf="@id/imgUserCart"
+                android:text="@string/add_customer"
+                android:layout_centerVertical="true"
+                android:gravity="center"/>
+            <Button
+                android:id="@+id/btnDeleteCustomerCartPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="@string/delete_customer"
+                android:background="@android:color/holo_red_dark"
+                android:layout_margin="@dimen/button_delete_margin"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvProductInCartPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_customer_checkout_padding"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <ScrollView
+            android:id="@+id/scrollViewPlace"
+            android:layout_height="300dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent">
+
+        </ScrollView>
+
+
+    </LinearLayout>
+    <!--Hold cart, check out cart-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"
+            />
+        <!--Sub Total-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_customer_height"
+            android:padding="@dimen/layout_customer_checkout_padding"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/sub_total"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvTotalPricePlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:layout_alignParentRight="true"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"
+            />
+
+        <!--Discount cart-->
+        <RelativeLayout
+            android:id="@+id/layoutAddDiscountPlace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_customer_height"
+            android:background="@color/windowBackground"
+            android:padding="@dimen/layout_customer_checkout_padding">
+            <TextView
+                android:id="@+id/tvNameDiscountCartPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/add_cart_discount"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvDiscountAmountCart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/amount"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"
+            />
+
+        <!--Tax-->
+        <RelativeLayout
+            android:id="@+id/layoutTaxPlace"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_customer_height"
+            android:background="@color/windowBackground"
+            android:padding="@dimen/layout_customer_checkout_padding"
+           >
+            <TextView
+                android:id="@+id/tvNameTaxPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/title_tax"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvAmountTaxPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/tax"
+                android:layout_alignParentRight="true"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"
+            />
+        <!--Sub Total-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_customer_height"
+            android:padding="@dimen/layout_customer_checkout_padding"
+            android:background="@android:color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/grand_total"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvGrandTotalPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:layout_alignParentRight="true"
+                android:gravity="center"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

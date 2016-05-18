@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="50dp"
+    android:layout_marginRight="50dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_customer_height"
+        android:background="@color/lighter_gray"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/shipping"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="7"
+            android:textStyle="bold"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_address"
+            android:layout_marginTop="12dp"
+            android:layout_weight="2"
+            android:background="@color/lighter_gray"
+            android:textColor="@color/Blue_700"
+            android:id="@+id/btnEditAddress" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_customer_height"
+        android:background="@color/lighter_gray"
+        android:layout_marginTop="80dp"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/payment"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="9"
+            android:id="@+id/tvPayment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPayment"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_below="@+id/linearLayout"
+        android:visibility="visible"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentBottom="true"
+            />
+        <LinearLayout
+            android:id="@+id/llAmountTendered"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@+id/layoutPayment"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/amount_tendered"
+                android:gravity="right"
+
+                />
+            <TextView
+                android:id="@+id/tvAmountTendered"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0"
+                android:layout_marginRight="10dp"
+
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/llAmountTendered"
+            android:layout_alignParentBottom="true"
+            />
+        <LinearLayout
+            android:id="@+id/remain"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@+id/llAmountTendered"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/remain"
+                android:gravity="right"
+
+                />
+            <TextView
+                android:id="@+id/tvRemain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="0"
+                android:layout_marginRight="10dp"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:layout_below="@+id/llAmountTendered"
+            android:layout_alignParentBottom="true"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@+id/layoutPayment"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="00.00"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:background="@drawable/button"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/btnSmallTotal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.00"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button"
+                android:id="@+id/btnTotal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00.00"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button"
+                android:id="@+id/btnLargeTotal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@+id/layoutPayment"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="1"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/button_number"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/btn1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btn2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btn3" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@+id/layoutPayment"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="4"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/button_number"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/btn4" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btn5" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btn6" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_below="@+id/layoutPayment"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="7"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/button_number"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/btn7" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btn8" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btn9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/layoutPayment"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Delete"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/button_number"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/btnDelete" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x10"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btnx10" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x100"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_number"
+                android:id="@+id/btnx100" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="@drawable/button_number"
+            android:text="@string/amount_tendered"
+            android:layout_weight="1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="60dp"
+            android:id="@+id/btnCashIn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_order"
+            android:textColor="@android:color/white"
+            android:layout_weight="1"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/button"
+            android:id="@+id/btnPlaceOrder" />
+
+    </LinearLayout>
+
+</RelativeLayout>

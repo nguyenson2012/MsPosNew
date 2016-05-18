@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layoutToolbar"
+        android:background="#FFA500"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/btnHamburger"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:background="@drawable/home_hamburger" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:id="@+id/toolbarLeft"
+            >
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/tvCategory"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="#FFFF"
+                android:text="@string/tv_category">
+            </TextView>
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/action_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:queryHint="Nhap tu tim kiem"
+                app:iconifiedByDefault="false">
+            </android.support.v7.widget.SearchView>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layoutToolbar"
+        android:visibility="visible">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listCategoryProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_customer_checkout_padding"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layoutBottomCustomSale"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/lighter_gray"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/tvTotalProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:textColor="#000000"
+            android:text="@string/Total_Product"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_marginLeft="50dp" />
+        <Button
+            android:id="@+id/btnCustomSale"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/custom_sale"
+            android:drawableLeft="@drawable/calculator"
+            android:gravity="right|center"
+            android:background="@drawable/button_custom_sale"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+             />
+    </RelativeLayout>
+</RelativeLayout>

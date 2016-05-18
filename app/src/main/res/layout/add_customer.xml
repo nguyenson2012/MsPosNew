@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_layout_create_customer"
+    android:padding="2dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+        <ImageView
+            android:id="@+id/img_list_customer_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back_black"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_create_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_customer"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_create_customer"
+        />
+    <EditText
+        android:id="@+id/edit_text_search_customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Search"
+        android:drawableLeft="@drawable/search_customer"
+        android:editable="true"
+        android:background="@color/gray_light"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"/>
+
+    <ListView
+        android:id="@+id/list_customer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </ListView>
+</LinearLayout>

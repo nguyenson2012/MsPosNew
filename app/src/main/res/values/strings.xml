@@ -1,0 +1,127 @@
+<resources>
+    <!--Login -->
+    <string name="welcome">Welcome</string>
+    <string name="login">LOGIN</string>
+    <string name="username">EMAIL</string>
+    <string name="password">PASSWORD</string>
+    <string name="error_password">Not a valid password!</string>
+    <string name="error_username">Not a valid email address!</string>
+
+    <!--End Login-->
+
+    <string name="app_name">MsPos</string>
+    <string name="action_comment">Comment</string>
+    <string name="action_cart">Cart(0)</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_categories">Categories</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="action_editsearch">Search</string>
+    <string name="tv_category">All Categories</string>
+    <string name="toast_saved">MsPos saved to #</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Find People</item>
+        <item >Photos</item>
+        <item >Communities</item>
+        <item >Pages</item>
+        <item >What\'s Hot</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_people</item>
+        <item>@drawable/ic_photos</item>
+        <item>@drawable/ic_communities</item>
+        <item>@drawable/ic_pages</item>
+        <item>@drawable/ic_whats_hot</item>
+    </array>
+
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_friends">Friends</string>
+    <string name="nav_item_notifications">Messages</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+
+    <string-array name="spinner_list_item_array">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+
+
+    <string name="cart">Cart</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="delete_customer">Delete</string>
+    <string name="sub_total">Subtotal</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="add_cart_discount">Discount cart</string>
+    <string name="hold_cart">On Hold</string>
+    <string name="check_out_cart">Check out 0.000 $</string>
+    <string name="Total_Product">Total Product:</string>
+    <string name="custom_sale">Custom Sale</string>
+    <string name="create_customer">Create Customer</string>
+    <string name="Search">Search</string>
+    <string name="Cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="new_customer">New Customer</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="address1">Addres Line 1</string>
+    <string name="address2">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="choose_province">Please select state or provice</string>
+    <string name="company">Company</string>
+    <string name="fax">Fax</string>
+    <string name="VATID">Vat ID</string>
+    <string name="order_comment">Order Comment:</string>
+    <string name="name">Name</string>
+    <string name="shippable">Shippable</string>
+    <string name="Price">Price</string>
+    <string name="price_dollar">0.00$</string>
+    <string name="TaxclassId">Tax Class Id</string>
+    <string name="quantity">Quantity</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="discount_max">Discount-Maximum 100%</string>
+    <string name="remove_discount">Remove Discount</string>
+    <string name="apply">Apply</string>
+    <string name="custom_discount">Custom Discount</string>
+    <string name="discount_type">Discount Type</string>
+    <string name="amount">0</string>
+    <string name="discount_code">Discount Code</string>
+    <string name="CouponCode">Coupon Code</string>
+    <string name="amount_discount">0.00</string>
+    <string name="tax">10%</string>
+    <string name="title_tax">Tax</string>
+    <string name="custom_price">Custom Price</string>
+    <string name="discount">Discount</string>
+    <string name="option">Options</string>
+    <string name="done">Done</string>
+    <string name="type">Type</string>
+    <string name="amount_tendered">Amount Tendered</string>
+    <string name="remain">Remain</string>
+    <string name="place_order">Place Order</string>
+    <string name="shipping">Shipping</string>
+    <string name="edit_address">Edit Address</string>
+    <string name="payment">Payment</string>
+    <string name="success_order">Order has been created successfully.</string>
+    <string name="success_order_id">Order ID : </string>
+    <string name="start_new_order">Start New Order</string>
+
+</resources>
